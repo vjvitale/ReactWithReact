@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TextInput from './TextInput.js';
+//import TextInput from './TextInput.js';
 
 
 
@@ -12,7 +11,6 @@ function App() {
         <Post body="I like Eggs"/>
         <EmoteSheep count="6"/>
       </div>
-      <AddPost/>
     </div>
   );
 }
@@ -31,7 +29,7 @@ function EmoteSheep(props){
 }
 
 
-
+/*
 class AddPost extends Component{
   constructor(){
     super();
@@ -62,6 +60,6 @@ class AddPost extends Component{
 
  
 }
-
+*/
 
 export default App;
