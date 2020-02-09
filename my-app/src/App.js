@@ -10,6 +10,7 @@ function App() {
         <Post body="I like Eggs"/>
         <EmoteSheep count="6"/>
       </div>
+
     </div>
   );
 }
