@@ -19,10 +19,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <div>
-        <textarea>Boy u a gay brother u know</textarea>
-        <button>Submit</button>
-      </div>
     </div>
   );
 }
