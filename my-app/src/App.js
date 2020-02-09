@@ -51,7 +51,7 @@ class MultiMessage extends React.Component {
 class MessageBox extends React.Component {
   render() {
     return(
-      <div>
+      <div className="App-Post">
         <form>
           <p></p>
           <p></p>
