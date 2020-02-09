@@ -16,29 +16,7 @@ class TextInput extends Component {
       event.preventDefault()
       const data = this.state
       console.log("Final data is",  data)
-
-      db.transaction(function(txn) {
-     txn.executeSql(
-       "SELECT name FROM sqlite_master WHERE type='table' AND name='table_messages'",
-       [],
-       function(tx, res) {
-         console.log('item:', res.rows.length);
-         if (res.rows.length == 0) {
-           txn.executeSql('DROP TABLE IF EXISTS table_messages', []);
-           txn.executeSql(
-             'CREATE TABLE IF NOT EXISTS table_messages(data VARCHAR(255))',
-             []
-           );
-         }
-         else{
-           txn.executeSql(
-             'INSERT INTO TABLE table_messages(data VARCHAR(255))',
-             []
-           );
-         }
-       }
-     );
-   });
+      );
 }
     handleInputChange = (event) => {
       event.preventDefault()

@@ -7,11 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="App-Post">
-        <Post body="I like Eggs"/>
-        <EmoteSheep count="6"/>
-        <MultiMessage/>
-      </div>
+      <MultiMessage/>
     </div>
   );
 }
@@ -40,10 +36,15 @@ class MultiMessage extends React.Component {
   render() {
         let rows = [];
         for(let i=0; i<6; i++){
-          rows.push(<MessageBoi key={i}/>)
+          var x = parseInt(Math.random()*10);
+          if(i%2){
+            rows.push(<div className="App-Post"> <Post body="I like Eggs"/> <EmoteSheep count={x}/> </div>)
+          }else{
+            rows.push(<div className="App-Post"> <MessageBoi/> <EmoteSheep count={x}/> </div>)
+          }
         }
-      return <p>{rows}</p>;
-  }
+      return <div>{rows}</div>;
+  } 
 }
 
 

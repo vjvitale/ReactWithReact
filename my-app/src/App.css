@@ -29,6 +29,7 @@ font-size: calc(10px + 2vmin); color: white; }
   max-width: 300px;
   position: relative;
   margin: auto;
+  margin-top: 10px; 
   top: 50px;
 }
 
