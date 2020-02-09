@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <MultiMessage/>
+      <MessageBox/>
     </div>
   );
 }
@@ -44,7 +45,23 @@ class MultiMessage extends React.Component {
           }
         }
       return <div>{rows}</div>;
-  } 
+  }
+}
+
+class MessageBox extends React.Component {
+  render() {
+    return(
+      <div>
+        <form>
+          <p></p>
+          <p></p>
+          <p><input type='text' placeholder='Enter your message here' name='message'/></p>
+          <p><button>Send Message</button></p>
+          </form>
+      </div>
+
+    )
+  }
 }
 
 
