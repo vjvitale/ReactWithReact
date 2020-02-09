@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TextInput from './TextInput.js';
+// import TextInput from './TextInput.js';
 
 
 
@@ -11,9 +11,9 @@ function App() {
       <div className="App-Post">
         <Post body="I like Eggs"/>
         <EmoteSheep count="6"/>
-        <Message count="6"/>
+        <MultiMessage/>
       </div>
-      <AddPost/>
+
     </div>
   );
 }
@@ -31,44 +31,53 @@ function EmoteSheep(props){
     )
 }
 
-function Message(props){
-  return(
-    <p>This is just a random message for you bro{props.count}</p>
-  )
-}
 
-
-
-class AddPost extends Component{
-  constructor(){
-    super();
-    this.state = {showPopup: false};
-  }
-
-  poppy(){
-    this.setState({
-      showPopup : !this.state.showPopup
-    })
-  }
-
-
+class MessageBoi extends React.Component {
   render(){
-    return(
-      <div>
-        {this.state.showPopup ?
-          <div className = "Popup">
-            <TextInput/>
-            <button onclick ={this.poppy.bind(this)}>Close</button>
-          </div>
-          : <button onclick ={this.setState({showPopup: !this.state.showPopup})}>Create Post</button>
-        }
-
-      </div>
-      )
+    return <p> This is a message for you</p>;
   }
+}
 
-
+class MultiMessage extends React.Component {
+  render() {
+        let rows = [];
+        for(let i=0; i<6; i++){
+          rows.push(<MessageBoi key={i}/>)
+        }
+      return <p>{rows}</p>;
+  }
 }
 
 
+
+// class AddPost extends Component{
+//   constructor(){
+//     super();
+//     this.state = {showPopup: false};
+//   }
+//
+//   poppy(){
+//     this.setState({
+//       showPopup : !this.state.showPopup
+//     })
+//   }
+//
+//
+//   render(){
+//     return(
+//       <div>
+//         {this.state.showPopup ?
+//           <div className = "Popup">
+//             <TextInput/>
+//             <button onclick ={this.poppy.bind(this)}>Close</button>
+//           </div>
+//           : <button onclick ={this.setState({showPopup: !this.state.showPopup})}>Create Post</button>
+//         }
+//
+//       </div>
+//       )
+//   }
+//
+//
+// }
 export default App;
