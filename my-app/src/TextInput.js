@@ -39,8 +39,7 @@ class TextInput extends Component {
        }
      );
    });
-    }
-
+}
     handleInputChange = (event) => {
       event.preventDefault()
       console.log(event)
