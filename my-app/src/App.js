@@ -11,6 +11,7 @@ function App() {
       <div className="App-Post">
         <Post body="I like Eggs"/>
         <EmoteSheep count="6"/>
+        <Message count="6"/>
       </div>
       <AddPost/>
     </div>
@@ -28,6 +29,12 @@ function EmoteSheep(props){
   return(
     <p><span role="img" aria-label="sheep">🐑</span> {props.count} </p>
     )
+}
+
+function Message(props){
+  return(
+    <p>This is just a random message for you bro{props.count}</p>
+  )
 }
 
 
@@ -48,11 +55,11 @@ class AddPost extends Component{
   render(){
     return(
       <div>
-        {this.state.showPopup ? 
+        {this.state.showPopup ?
           <div className = "Popup">
             <TextInput/>
             <button onclick ={this.poppy.bind(this)}>Close</button>
-          </div> 
+          </div>
           : <button onclick ={this.setState({showPopup: !this.state.showPopup})}>Create Post</button>
         }
 
@@ -60,7 +67,7 @@ class AddPost extends Component{
       )
   }
 
- 
+
 }
 
 
