@@ -12,7 +12,7 @@ class TextInput extends Component {
       }
   }
 
-    handleSubmit = () => {
+    handleSubmit = (event) => {
       event.preventDefault()
       const data = this.state
       console.log("Final data is",  data)
@@ -57,7 +57,7 @@ class TextInput extends Component {
         <h1>Forms and Inputs</h1>
         <p>Message is :{message}</p>
           <form onSubmit={this.handleSubmit}>
-            <p><input type='text' placeholder='Enter your message here', name='message' onChange={this.handleInputChange}/></p>
+            <p><input type='text' placeholder='Enter your message here' name='message' onChange={this.handleInputChange}/></p>
             <p><button>Send Message</button></p>
             </form>
         </div>
@@ -66,4 +66,4 @@ class TextInput extends Component {
     }
 }
 
-export default
+export default TextInput;
