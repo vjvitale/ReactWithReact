@@ -2,29 +2,28 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to be🐑.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
-        <textarea>Boy u a gay brother u know</textarea>
-        <button>Submit</button>
+      <div className="App-Post">
+        <Post body="I like Eggs"/>
+        <EmoteSheep count="6"/>
       </div>
     </div>
   );
+}
+
+class Post extends React.Component{
+  render(){
+    return <p>{this.props.body}</p>
+  }
+}
+
+function EmoteSheep(props){
+  return(
+    <p><span role="img" aria-label="sheep">🐑</span> {props.count} </p>
+    )
 }
 
 
