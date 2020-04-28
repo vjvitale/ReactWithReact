@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  
+
 }
 
 html{
-  background-color: #9966ff; 
+  background-color: #759FFF; 
 }
 
 .App-logo {
@@ -29,7 +29,7 @@ font-size: calc(10px + 2vmin); color: white; }
   max-width: 300px;
   position: relative;
   margin: auto;
-  margin-top: 10px; 
+  margin-top: 10px;
   top: 50px;
 }
 
